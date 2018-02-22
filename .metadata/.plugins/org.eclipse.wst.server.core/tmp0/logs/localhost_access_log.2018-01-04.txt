@@ -1,0 +1,9 @@
+127.0.0.1 - - [04/Jan/2018:17:24:32 -0600] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:24:33 -0600] "GET /advanced-jaxrs-03/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:25:03 -0600] "GET /advanced-jaxrs-03/webapi/test HTTP/1.1" 200 49
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:25:04 -0600] "GET /advanced-jaxrs-03/webapi/test HTTP/1.1" 200 49
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:25:05 -0600] "GET /advanced-jaxrs-03/webapi/test HTTP/1.1" 200 49
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:25:19 -0600] "GET /advanced-jaxrs-03/webapi/test HTTP/1.1" 200 49
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:25:20 -0600] "GET /advanced-jaxrs-03/webapi/test HTTP/1.1" 200 49
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:25:20 -0600] "GET /advanced-jaxrs-03/webapi/test HTTP/1.1" 200 49
+0:0:0:0:0:0:0:1 - - [04/Jan/2018:17:32:04 -0600] "GET /advanced-jaxrs-03/webapi/paramValue/test?queryParam=queryValue HTTP/1.1" 200 57

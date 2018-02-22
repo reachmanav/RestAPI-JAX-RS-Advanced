@@ -1,0 +1,35 @@
+package org.manav.javabrains.rest;
+
+import java.util.StringTokenizer;
+
+public class TestString {
+
+	private static final String AUTHORIZATION_BASIC_TOKEN="Basic ";
+	
+	public static void main(String[] args) {
+
+		
+		String inputString = "Basic dXNlcjpwYXNzd29yZA==";
+
+		String authKey = inputString.replaceAll(AUTHORIZATION_BASIC_TOKEN, "");
+		System.out.println("authKey="+authKey);
+		
+		byte[] decodedAuthKey = Base64.getDecoder().decode(authKey);
+		String s = new String(decodedAuthKey);
+			
+		
+		
+		System.out.println("decodedAuthKey="+s);
+		
+		
+		StringTokenizer key = new StringTokenizer(s, ":");
+		
+		String user = key.nextToken();
+		String password = key.nextToken();
+
+		System.out.println("user="+user);
+		System.out.println("password="+password);
+		
+	}
+
+}

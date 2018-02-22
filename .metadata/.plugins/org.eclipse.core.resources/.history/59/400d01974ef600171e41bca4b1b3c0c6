@@ -1,0 +1,41 @@
+package org.manav.javabrains.rest;
+
+import java.io.IOException;
+import java.util.Base64;
+import java.util.List;
+import java.util.StringTokenizer;
+
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerRequestFilter;
+import javax.ws.rs.ext.Provider;
+
+@Provider
+public class SecurityFilter implements ContainerRequestFilter {
+
+	private static final String AUTHORIZATION_HEADER="Authorization";
+	private static final String AUTHORIZATION_BASIC_TOKEN="Basic ";
+	
+	@Override
+	public void filter(ContainerRequestContext requestcontext) throws IOException {
+		
+		List<String> authKeyList = requestcontext.getHeaders().get(AUTHORIZATION_HEADER);
+		String authKey = authKeyList.get(0);
+		authKey = authKey.replaceAll(AUTHORIZATION_BASIC_TOKEN, "");
+		
+		byte[] decodedAuthKeyByteArray = Base64.getDecoder().decode(authKey);
+		String decodedAuthKey = new String(decodedAuthKeyByteArray);
+		
+		StringTokenizer key = new StringTokenizer(decodedAuthKey, ":");
+		
+		String user = key.nextToken();
+		String password = key.nextToken();
+		
+		if ("users".equals(user) && "password".equals(password))  {
+			return;
+		}
+		
+		
+	
+	}
+
+}

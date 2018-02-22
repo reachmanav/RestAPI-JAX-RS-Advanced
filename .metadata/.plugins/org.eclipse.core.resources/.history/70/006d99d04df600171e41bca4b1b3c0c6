@@ -1,0 +1,26 @@
+package org.manav.javabrains.rest;
+
+import java.util.Base64;
+
+public class TestString {
+
+	private static final String AUTHORIZATION_BASIC_TOKEN="Basic ";
+	
+	public static void main(String[] args) {
+
+		
+		String inputString = "Basic dXNlcjpwYXNzd29yZA==";
+
+		String authKey = inputString.replaceAll(AUTHORIZATION_BASIC_TOKEN, "");
+		System.out.println("authKey="+authKey);
+		
+		byte[] decodedAuthKey = Base64.getDecoder().decode(authKey);
+		String s = decodedAuthKey.toString();
+				
+		System.out.println("decodedAuthKey="+s);
+		
+		System.out.println("Hello World");
+
+	}
+
+}

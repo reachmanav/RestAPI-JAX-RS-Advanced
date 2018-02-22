@@ -1,0 +1,5 @@
+package org.manav.javabrains.rest;
+
+public class DateResource {
+
+}

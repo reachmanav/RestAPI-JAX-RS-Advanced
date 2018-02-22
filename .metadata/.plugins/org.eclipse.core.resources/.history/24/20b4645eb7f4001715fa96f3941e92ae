@@ -1,0 +1,7 @@
+package org.manav.javabrains.rest;
+
+import javax.ws.rs.ext.ParamConverter;
+
+public class MyDateCoverter implements ParamConverter<T> {
+
+}

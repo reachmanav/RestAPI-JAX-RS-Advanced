@@ -1,0 +1,11 @@
+package org.manav.javabrains.rest.client;
+
+public class GenericsInvocation {
+
+	public static void main (String args[])  {
+		
+		
+		
+		
+	}
+}

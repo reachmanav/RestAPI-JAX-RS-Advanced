@@ -1,0 +1,31 @@
+package org.manav.javabrains.rest.client;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.WebTarget;
+
+public class InvocationDemo {
+
+	public static void main(String[] args) {
+		
+		
+		prepareForInvokationGet(2015);
+
+	}
+
+	
+	
+	public prepareForInvokationGet()  {
+		
+		Client client = new Client();
+				
+		WebTarget baseTarget = client.target("http://localhost:8080/advanced-jaxrs-03/webapi");
+		WebTarget messageTarget = baseTarget.path("messages");
+		WebTarget singleMessageTarget = messageTarget.path("{messageId}");
+		
+		
+	}
+	
+	
+	
+	
+}

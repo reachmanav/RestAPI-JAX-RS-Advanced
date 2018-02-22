@@ -1,0 +1,18 @@
+package org.manav.javabrains.rest;
+
+public class TestString {
+
+	private static final String AUTHORIZATION_HEADER="Authorization";
+	private static final String AUTHORIZATION_BASIC_TOKEN="Basic ";
+	
+	public static void main(String[] args) {
+
+	
+		
+		String inputString = "Basic dXNlcjpwYXNzd29yZA==";
+
+		System.out.println("Hello World");
+
+	}
+
+}
